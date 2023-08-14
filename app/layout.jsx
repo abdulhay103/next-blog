@@ -1,9 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Next Blog",
@@ -13,9 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="bg-gradient-to-tl from-teal-100 via-slate-50 to-indigo-200 min-h-screen">
         <Header />
-        <div className=" bg-zinc-300 py-20 container mx-auto">{children}</div>
+        <div className="py-20 container mx-auto">{children}</div>
         <Footer />
       </body>
     </html>
